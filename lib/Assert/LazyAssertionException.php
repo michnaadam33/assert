@@ -14,7 +14,7 @@
 
 namespace Assert;
 
-class LazyAssertionException extends InvalidArgumentException
+class LazyAssertionException extends InvalidArgumentException implements LazyAssertionExceptionInterface
 {
     /**
      * @var InvalidArgumentException[]

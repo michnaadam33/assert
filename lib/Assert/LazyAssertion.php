@@ -205,7 +205,7 @@ class LazyAssertion
             throw new LogicException('Exception class name must be passed as a string');
         }
 
-        if ('Assert\LazyAssertionException' !== $className && !\is_subclass_of($className, 'Assert\LazyAssertionException')) {
+        if (!\is_subclass_of($className, LazyAssertionExceptionInterface::class)) {
             throw new LogicException($className.' is not (a subclass of) Assert\LazyAssertionException');
         }
 
